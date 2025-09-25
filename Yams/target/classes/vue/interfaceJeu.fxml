@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:controller="controleur.ControllerJeu"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="1000" prefHeight="500"
+            styleClass="page-jeu">
+            
+     <ImageView fx:id="fondImageView" fitHeight="500.0" fitWidth="1000.0" layoutX="0.0" layoutY="0.0" />
+
+    <!-- Dés -->
+    <HBox spacing="10" alignment="CENTER" layoutX="150" layoutY="100">
+	    <VBox alignment="CENTER">
+	        <ImageView fx:id="de1" fitWidth="50" fitHeight="50"/>
+	        <CheckBox fx:id="cbDe1"/>
+	    </VBox>
+	    <VBox alignment="CENTER">
+	        <ImageView fx:id="de2" fitWidth="50" fitHeight="50"/>
+	        <CheckBox fx:id="cbDe2"/>
+	    </VBox>
+	    <VBox alignment="CENTER">
+	        <ImageView fx:id="de3" fitWidth="50" fitHeight="50"/>
+	        <CheckBox fx:id="cbDe3"/>
+	    </VBox>
+	    <VBox alignment="CENTER">
+	        <ImageView fx:id="de4" fitWidth="50" fitHeight="50"/>
+	        <CheckBox fx:id="cbDe4"/>
+	    </VBox>
+	    <VBox alignment="CENTER">
+	        <ImageView fx:id="de5" fitWidth="50" fitHeight="50"/>
+	        <CheckBox fx:id="cbDe5"/>
+	    </VBox>
+	</HBox>
+    
+    <!-- Info tour -->
+    <Label fx:id="turnLabel" layoutX="20" layoutY="10" text="Tour 1" styleClass="label-turn"/>
+    <Label fx:id="playerTurnLabel" layoutX="250" layoutY="10" text="Au tour du joueur" styleClass="label-player-turn" />
+
+    <!-- Boutons relancer / arrêter -->
+    <HBox fx:id="buttonPane" layoutX="200" layoutY="200" spacing="20">
+        <Button fx:id="rollButton" text="Relancer" onAction="#handleRoll" />
+        <Button fx:id="stopButton" text="S'arrêter" onAction="#handleStop" />
+    </HBox>
+
+    <!-- Panneau combinaisons (caché au départ) -->
+	<VBox fx:id="combinaisonPane" layoutX="50" layoutY="270" spacing="15" visible="false" managed="false" style="-fx-padding: 15; -fx-background-color: #f0f0f0; -fx-border-color: #333; -fx-border-radius: 5; -fx-background-radius: 5;">
+	    <Label text="Choisissez une combinaison:" style="-fx-font-weight: bold; -fx-font-size: 16;" />
+	
+	    <GridPane hgap="15" vgap="15">
+	        <Button fx:id="btnThreeOfKind" text="Le Brelan" onAction="#onComboSelected" userData="T" GridPane.rowIndex="0" GridPane.columnIndex="0" prefWidth="140" />
+	        <Button fx:id="btnFourOfKind" text="Le Carré" onAction="#onComboSelected" userData="4" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="140" />
+	        <Button fx:id="btnFullHouse" text="Le Full" onAction="#onComboSelected" userData="F" GridPane.rowIndex="0" GridPane.columnIndex="2" prefWidth="140" />
+	
+	        <Button fx:id="btnSmallStraight" text="La petite suite" onAction="#onComboSelected" userData="S" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+	        <Button fx:id="btnLargeStraight" text="la grande suite" onAction="#onComboSelected" userData="L" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+	        
+	        <Button fx:id="btnChance" text="La Chance" onAction="#onComboSelected" userData="C" GridPane.rowIndex="1" GridPane.columnIndex="2" prefWidth="140" />
+	        <Button fx:id="btnYams" text="Le Yams" onAction="#onComboSelected" userData="Y" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="140" />
+	    </GridPane>
+	</VBox>
+	
+    <!-- Score total et détail à droite -->
+    <VBox fx:id="scoreBox" layoutX="600" layoutY="10" spacing="10" prefWidth="350">
+        <Label text="Score Joueur:"/>
+        <Label fx:id="totalScoreLabel" text="0"/>
+        <ListView fx:id="scoreListView" prefHeight="160" prefWidth="300" />
+        <Label text="Score IA:" />
+        <Label fx:id="aiTotalScore" text="0" />
+        <ListView fx:id="aiScoreListView" prefHeight="150" prefWidth="300" />
+    </VBox>
+    
+    <Button layoutX="800" layoutY="20" prefWidth="120" prefHeight="40" text="Quitter" onAction="#handleRetour"/>
+    
+</AnchorPane>

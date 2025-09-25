@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:controller="controleur.ControllerSelectionCarte"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="1000" prefHeight="700"
+            styleClass="page-jeu">
+
+    <!-- Image de fond plein écran -->
+    <ImageView fx:id="fondImageView" fitWidth="1000.0" fitHeight="700.0" layoutX="0.0" layoutY="0.0" />
+
+    <!-- Pane pour le choix de cartes -->
+    <VBox fx:id="cardSelectionPane" layoutX="0" layoutY="0" prefWidth="1000" prefHeight="700" alignment="CENTER" spacing="30">
+    
+	    <!-- Label du tour de joueur -->
+	    <Label fx:id="playerTurnLabel" text="Tour joueur" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" />
+	    
+        <!-- Ligne du haut : 3 cartes -->
+        <HBox spacing="20" alignment="CENTER">
+            <ImageView fx:id="card1" fitWidth="150" fitHeight="250" />
+            <ImageView fx:id="card2" fitWidth="150" fitHeight="250" />
+            <ImageView fx:id="card3" fitWidth="150" fitHeight="250" />
+        </HBox>
+
+        <!-- Ligne du milieu : 3 cartes -->
+        <HBox spacing="20" alignment="CENTER">
+        	<ImageView fx:id="card4" fitWidth="150" fitHeight="250" />
+            <ImageView fx:id="card5" fitWidth="150" fitHeight="250" />
+            <ImageView fx:id="card6" fitWidth="150" fitHeight="250" />
+        </HBox>
+    </VBox>
+
+</AnchorPane>

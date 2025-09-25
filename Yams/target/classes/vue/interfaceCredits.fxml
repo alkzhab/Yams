@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+
+
+<AnchorPane fx:controller="controleur.ControllerCredits"
+			xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="1000" prefHeight="500"
+            styleClass="page-credits">
+
+    <!-- Image de fond -->
+    <ImageView fitWidth="1000" fitHeight="500" layoutX="0" layoutY="0">
+        <image>
+            <Image url="@Images/fond.png" preserveRatio="false"/>
+        </image>
+    </ImageView>
+    
+    <!-- Bouton Retour en haut à gauche -->
+    <Button layoutX="20" layoutY="20" prefWidth="120" prefHeight="40" text="Retour" onAction="#handleRetour"/>
+    
+    <!-- Titre des crédits -->
+    <Text fx:id="titre" layoutX="420" layoutY="60" text="CREDITS" />
+
+    <!-- Texte des crédits : plusieurs Text dans un VBox -->
+    <VBox layoutX="100" layoutY="120" prefWidth="440" spacing="5">
+        <Text styleClass="text" text="Projet réalisé par" />
+        <Text styleClass="text" text="Alkhastov Zhabrail &amp; Mechety Yanis" />
+        <Text styleClass="text" text="Dans le cadre du projet universitaire" />
+        <Text styleClass="text" text="BUT Informatique - Université Gustave Eiffel" />
+        <Text styleClass="text" text="Année académique 2024 - 2025" />
+        <Text styleClass="text" text="Encadré par :" />
+        <Text styleClass="text" text="Technologies utilisées : Figma, Java et JavaFX" />
+        <Text styleClass="text" text="Merci d’avoir testé notre jeu" />
+    </VBox>
+
+</AnchorPane>
+

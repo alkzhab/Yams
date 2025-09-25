@@ -1,0 +1,123 @@
+
+/* Style pour le titre */
+#titre {
+    -fx-font-family: "System Bold";
+    -fx-font-size: 48px;
+    -fx-fill: #FFC107;
+}
+
+/* Style des autres textes */
+.page-credits .text {
+    -fx-font-family: "System Bold";
+    -fx-fill: white;
+    -fx-font-size: 36px;
+}
+
+/* Style des boutons */
+.page-accueil .button {
+    -fx-background-color: #FFC107;
+    -fx-background-radius: 20;
+    -fx-font-size: 24px;
+    -fx-font-family: "System Bold";
+    -fx-text-fill: white;
+}
+
+/* Style des boutons */
+.page-jouer .button {
+    -fx-background-color: #FFC107;
+    -fx-background-radius: 20;
+    -fx-font-size: 24px;
+    -fx-font-family: "System Bold";
+    -fx-text-fill: white;
+}
+
+/* Style des boutons */
+.page-credits .button {
+    -fx-background-color: #FFC107;
+    -fx-background-radius: 20;
+    -fx-font-size: 24px;
+    -fx-font-family: "System Bold";
+    -fx-text-fill: white;
+}
+
+
+.page-credits .text {
+    -fx-font-size: 24px; /* taille plus petite que 36 */
+    -fx-font-family: "System Bold"; /* garde la même police */
+    -fx-fill: white;
+}
+
+.label-turn {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* couleur bleu foncé */
+    -fx-background-color: #ecf0f1; /* fond clair */
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 4,0,0,2 );
+}
+
+.label-player-turn {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e; /* couleur bleu-gris */
+    -fx-background-color: #bdc3c7; /* fond gris clair */
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.15) , 3,0,0,1 );
+}
+
+/* Style des boutons */
+.page-jeu .button {
+    -fx-background-color: #FFC107;
+    -fx-background-radius: 20;
+    -fx-font-size: 20px;
+    -fx-font-family: "System Bold";
+    -fx-text-fill: white;
+}
+
+/* Container VBox */
+#scoreBox {
+    -fx-background-color: #f0f4f8;
+    -fx-padding: 15;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #aaccee;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 2, 2);
+}
+
+/* Labels titres */
+#scoreBox > Label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2a3b5a;
+}
+
+/* Scores */
+#scoreBox > Label#totalScoreLabel, 
+#scoreBox > Label#aiTotalScore {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1b6ca8;
+}
+
+/* ListView */
+#scoreListView {
+    -fx-background-color: white;
+    -fx-border-color: #aaccee;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.card-explanation{
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e; /* couleur bleu-gris */
+    -fx-background-color: #bdc3c7; /* fond gris clair */
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.15) , 3,0,0,1 );
+}
+
+

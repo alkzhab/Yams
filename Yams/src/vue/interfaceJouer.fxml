@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:controller="controleur.ControllerJouer"
+			xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="1000" prefHeight="500"
+            styleClass="page-jouer">
+
+    <!-- Image de fond -->
+    <ImageView fitWidth="1000" fitHeight="500" layoutX="0" layoutY="0">
+        <image>
+            <Image url="@Images/fond.png" preserveRatio="false"/>
+        </image>
+    </ImageView>
+
+    <!-- Titre -->
+    <Text fx:id="titre" layoutX="445" layoutY="70" text="Jouer"/>
+
+    <!-- Bouton Solo -->
+    <Button layoutX="360" layoutY="150" prefWidth="300" prefHeight="50" text="Solo" onAction="#handleSolo"/>
+
+    <!-- Bouton Duo -->
+    <Button layoutX="360" layoutY="220" prefWidth="300" prefHeight="50" text="2 Joueurs" onAction="#handleDuo"/>
+
+    <!-- Bouton Bonus -->
+    <Button layoutX="360" layoutY="290" prefWidth="300" prefHeight="50" text="Bonus" onAction="#handleBonus"/>
+    
+    <Button layoutX="360" layoutY="360" prefWidth="300" prefHeight="50" text="Retour" onAction="#handleRetour"/>
+
+    <ImageView fitWidth="150" fitHeight="150" layoutX="700" layoutY="340" rotate="90">
+	    <image>
+	        <Image url="@Images/des.png" preserveRatio="true"/>
+	    </image>
+	</ImageView>
+
+    <!-- Dés en bas à gauche -->
+    <ImageView fitWidth="200" fitHeight="160" layoutX="20" layoutY="20">
+        <image>
+            <Image url="@Images/des2.png" preserveRatio="true"/>
+        </image>
+    </ImageView>
+
+</AnchorPane>
